@@ -1,0 +1,40 @@
+load res/Image.ppm image
+
+brighten 50 image image-brighter
+vertical-flip image-brighter image-brighter-vertical
+save res/Image-script-brighter-vertical.ppm image-brighter-vertical
+
+brighten -50 image image-darker
+horizontal-flip image-darker image-darker-horizontal
+save res/Image-script-darker-horizontal.ppm image-darker-horizontal
+
+red-component image image-red-greyscale
+save res/Image-script-red-greyscale.ppm image-red-greyscale
+
+green-component image image-green-greyscale
+save res/Image-script-green-greyscale.ppm image-green-greyscale
+
+blue-component image image-blue-greyscale
+save res/Image-script-blue-greyscale.ppm image-blue-greyscale
+
+intensity-component image image-intensity-greyscale
+save res/Image-script-intensity-greyscale.ppm image-intensity-greyscale
+
+value-component image image-value-greyscale
+save res/Image-script-value-greyscale.ppm image-value-greyscale
+
+load res/landscape.jpg landscape
+
+blur landscape landscape-blur
+save res/landscape-blur.jpg landscape-blur
+
+sharpen landscape landscape-sharpen
+save res/landscape-sharpen.jpg landscape-sharpen
+
+greyscale landscape landscape-greyscale
+save res/landscape-greyscale.jpg landscape-greyscale
+
+sepia landscape landscape-sepia
+save res/landscape-sepia.jpg landscape-sepia
+
+q

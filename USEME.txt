@@ -1,0 +1,234 @@
+HOW TO USE THE GUI
+
+1) Load an image. Click the "Load a file" button, which will show a directory of files. Navigate to the
+   image to load in and click "Open". A dialog box will pop up asking what the file should be referred
+   to as in the image processing program. Name the file and press OK to load the image into the program.
+
+2) Operations supported by our program
+   In the Image Operations dropdown menu, choose the operation to apply to the image being shown.
+
+   ***** Blur *****
+
+   Select "Blur" from the dropdown menu.
+   Enter the name of the local image to blur.
+   Enter a new name for the blurred image.
+
+
+   ***** Brighten *****
+
+   Select "Brighten" from the dropdown menu.
+   Enter the name of the local image to brighten/darken.
+   Enter a new name for the brightened/darkened image.
+   Enter the integer amount the image should be brightened/darkened by. A positive integer will brighten
+      the image and a negative integer will darken the image.
+
+
+   ***** Component *****
+
+   Select "Component" from the dropdown menu.
+   Enter the name of the local image to greyscale with a component.
+   Enter a new name for the brightened/darkened image.
+   Enter the name of the component the image should be greyscaled with. Possible names are "red",
+     "green", "blue", "value", and "intensity".
+
+
+   ***** Greyscale *****
+
+   Select "Greyscale" from the dropdown menu.
+   Enter the name of the local image to greyscale.
+   Enter a new name for the greyscaled image.
+
+
+   ***** Flip horizontally *****
+
+   Select "Flip horizontally" from the dropdown menu.
+   Enter the name of the local image to flip horizontally.
+   Enter a new name for the flipped image.
+
+
+   ***** Flip vertically *****
+
+   Select "Flip vertically" from the dropdown menu.
+   Enter the name of the local image to flip vertically.
+   Enter a new name for the flipped image.
+
+
+   ***** Sepia *****
+
+   Select "Sepia" from the dropdown menu.
+   Enter the name of the local image to apply a sepia filter to.
+   Enter a new name for the image with a sepia filter applied.
+
+
+   ***** Sharpen *****
+
+   Select "Sharpen" from the dropdown menu.
+   Enter the name of the local image to sharpen.
+   Enter a new name for the sharpened image.
+
+
+3) Save an image. Click the "Save a file" button, which will prompt you for the local name of the image
+   you want to save. A directory of files will be shown. Navigate to the location where you want the
+   image to be saved. Name the file with the desired extension (e.g. "jpg", "png", "ppm", etc.) and
+   click "Save". The image will be saved in that location with the given name.
+
+   You can save any image loaded into the program at any time and continue editing images after.
+
+   For example, if your edited image is named "image" in the program and you want to save it to your
+   computer as a jpg called "editedimage", you would click the "Save a file button" and name it
+   "editedimage.jpg".
+
+
+NOTES:
+   - You can close the GUI window at any time to exit out of the program.
+   - Photos do not automatically save, you have to click the "Save a file" button to save a photo to
+     your computer.
+   - You can apply multiple transformations to one image, just make sure to use the new local
+     name to continue on with the transformations.
+   - Photos do not automatically load, you need to load an image in order to apply transformations
+     to it.
+   - You can save an image, then apply more transformations to it.
+--------------------------------------------------------------------------------------------------------
+(ASSIGNMENT 5) SCRIPT COMMANDS:
+
+1) Load the image. This prgogram supports PNG, BMP, JPG, and PPM formats. The syntax for
+   load is a follows:
+
+   "load path-of-image local-name"
+
+   For example, if we wanted to load the Image.ppm file, we would write:
+   "load res/Image.ppm image"
+
+   If we wanted to load the landscape.jpg file, we would write:
+   "load res/landscape.jpg landscape"
+
+   The path of the image is the given image's path in the assignment folder. For example, "res/Image
+   .ppm" and "res/landscape.jpg", both found in the res folder, are examples of path names. The
+   local name of the file is what you will be calling the file as you apply transformations on it,
+   as it would be inconvenient to write the path every time you want to apply a transformation
+   to that image.
+
+
+
+2) The following commands with their following image transformations are supported by this program:
+
+   ***** brighten an image *****
+
+   "brighten increment local-name new-local-name"
+
+   For example, if we wanted to brighten the Image.ppm file, we would write:
+   "brighten 50 image image-brighten"
+
+   The image, retrieved through the local name 'image', would be brightened by 50 values and
+   be stored with a new local name, image-brighten
+
+
+   ***** darken an image *****
+
+   "brighten increment local-name new-local-name"
+
+   For example, if we wanted to darken the Image.ppm file, we would write:
+   "brighten -50 image image-darker"
+
+   The image, retrieved through the local name 'image', would be brightened by -50 values, so
+   basically darkened by 50 values, and be stored with a new local name, image-darker
+
+
+   ***** vertically flip an image *****
+
+   "vertical-flip local-name new-local-name"
+
+   For example, if we wanted to vertically flip the Image.ppm file, we would write:
+   "vertical-flip image image-vertical"
+
+   The image, retrieved through the local name 'image', would be vertically flipped, and be stored
+   with a new local name, image-vertical
+
+   ***** greyscale an image *****
+
+   With the red component: "red-component local-name new-local-name"
+   With the green component: "green-component local-name new-local-name"
+   With the blue component: "blue-component local-name new-local-name"
+   With the value component: "value-component local-name new-local-name"
+   With the intensity component: "intensity-component local-name new-local-name"
+
+   For example, if we wanted to greyscale the Image.ppm file with a value component, we would write:
+   "value-component image image-greyscale-value"
+
+   The image, retrieved through the local name 'image', would be greyscaled with the value component,
+   and be stored with a new local name, image-greyscale-value
+
+
+   ***** blur an image ******
+
+   "blur local-name new-local-name"
+
+   For example, if we wanted to blur the landscape.jpg file, we would write:
+   "blur landscape landscape-blur"
+
+   The image, retrieved through the local name 'landscape', would be blurred, and be stored with a
+   new local name, landscape-blur
+
+
+   ***** sharpen an image ******
+
+   "sharpen local-name new-local-name"
+
+   For example, if we wanted to sharpen the landscape.jpg file, we would write:
+   "sharpen landscape landscape-sharpen"
+
+   The image, retrieved through the local name 'landscape', would be sharpened, and be stored with a
+   new local name, landscape-sharpen
+
+
+   ***** apply a sepia tone to an image ******
+
+   "sepia local-name new-local-name"
+
+   For example, if we wanted to apply a sepia tone to the landscape.jpg file, we would write:
+   "sepia landscape landscape-sepia"
+
+   The image, retrieved through the local name 'landscape', would have the sepia tone applied to it,
+   and be stored with a new local name, landscape-sepia
+
+
+   ***** apply a greyscale tone to an image ******
+
+   "greyscale local-name new-local-name"
+
+   For example, if we wanted to apply a greyscale tone to the landscape.jpg file, we would write:
+   "greyscale landscape landscape-sepia"
+
+   The image, retrieved through the local name 'landscape', would have the greyscale tone applied to
+   it, and be stored with a new local name, landscape-greyscale
+
+
+
+3) Save the image. You can save the image at any time through the new local name you give a command
+   after you call a command.
+
+   If your image is a PPM, the syntax is as follows:
+   "save path-to-save-to local-name"
+
+   If your image is not a PPM, the syntax is as follows:
+   "save path-to-save-to local-name extension"
+
+   For example, if you want to save your landscape-sepia photo to your res folder given in this
+   ImageProcessing directory, you could run the following:
+
+   "save res/landscape-sepia-transformation landscape-sepia .jpg"
+
+   This would save your sepia transformed image to your res folder with the name
+   'landscape-sepia-transformation' with the .jpg extension.
+
+
+NOTES:
+
+   - You can press 'q' at any time to exit out of the program.
+   - Photos do not automatically save, you have to run save in order for it to save to the given
+     file
+   - You can apply multiple transformations to one image, just make sure to use the new local
+     name to continue on with the transformations
+   - Photos do not automatically load, you need to load an image in order to apply transformations
+     to it
+   - You can save an image, then apply more transformations to it
