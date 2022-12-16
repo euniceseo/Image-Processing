@@ -1,8 +1,8 @@
-##Image Processing Software
+## Image Processing Software
 
 This project was created at Northeastern University with Emily Lin
 
-##ASSIGNMENT 6
+## ASSIGNMENT 6
 The original parts of the program from the previous two assignments are complete. The new GUI supports
 loading and saving multiple images and editing them using flips, component visualization, greyscale,
 blur, sharpen, and sepia. The new GUI also shows the histogram of an image and updates the histogram
@@ -27,7 +27,7 @@ Creative Commons license, so we are legally allowed to use it in our project.
 The "Image.ppm" image that all the resulting images were produced on were created by
 us through TextEdit and visualized through Preview. We authorize its use in our project.
 
-##ASSIGNMENT 5
+## ASSIGNMENT 5
 All parts of the program are complete, including the newly added abilities of parsing a script file and
 applying a transformation matrix to filter an image, as well as the original parts of the program
 from the last assignment.
@@ -45,7 +45,7 @@ the ImageModel interface to only represent a single image. The ImageLibrary cont
 addImage() methods that the ImageModel had in the last assignment. Now, the user does not have to set the
 image being used before changing it, and each class only represents one thing.
 
-##ASSIGNMENT 4
+## ASSIGNMENT 4
 Controller
 The Controller interface represents the controller for the image processor.
 It allows the user to start the image processing program using the start() method.
