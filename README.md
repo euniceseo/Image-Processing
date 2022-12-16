@@ -2,7 +2,7 @@
 
 This project was created at Northeastern University with Emily Lin
 
-## ASSIGNMENT 6
+##ASSIGNMENT 6
 The original parts of the program from the previous two assignments are complete. The new GUI supports
 loading and saving multiple images and editing them using flips, component visualization, greyscale,
 blur, sharpen, and sepia. The new GUI also shows the histogram of an image and updates the histogram
